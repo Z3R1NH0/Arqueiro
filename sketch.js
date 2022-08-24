@@ -19,10 +19,10 @@ function setup() {
 	
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);
-
+        papel = new Paper(300,450,70);	
 	Engine.run(engine);
 
-	papel = new Paper(300,650,100);	
+	
 }
 
 
@@ -40,7 +40,7 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode === 32){
-		Matter.Body.applyForce(papel.body,{x:0,y:0},{x:25,y:-50});
+		Matter.Body.applyForce(papel.body,{x:0,y:0},{x:25,y:-80});
 	}
 }
 
